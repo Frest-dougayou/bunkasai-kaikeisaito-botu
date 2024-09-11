@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>会計リスト 2024</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="top-page">文化祭会計用サイト</div>
+
+    <div id="console-money">現在の金額は<span id="total_money">0</span>円です</div>
+
+    <form id="id-form">
+        <div class="form-group">
+            <!--labelのforと、inputのidは一致させないといけない、つまりただの文字をくっつけてるわけではないということ。内容をリンクさせるみたいな感じ？-->
+            <label for="merchandise-id" class="text">商品のIDを入力してください：</label>
+            <input type="text" id="merchandise-id" name="name"><!--javascriptはidで入力を受け取ってるので名前を変えないように注意-->
+        </div>
+    </form>
+
+    <table id="buy-list-table">
+        <thead>
+            <tr>
+                <th>商品名</th>
+                <th>金額</th>
+                <th class="cnt-cell">購入個数</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <footer id="footer"><!--bodyは公式のやつだからcssでも指定できるけど、footerは公式じゃないからidとかclassを用意しないとcssでいじれない-->
+        <div class="text">説明書</div>
+        <div class="manual">①入力フォームをクリックし、半角入力にしてください</div>
+        <div class="manual">②商品をスキャナーの正面に向けて、商品のバーコードを読み取ってください</div>
+        <div class="manual">③自動的に金額が読み込まれ、合計金額に加算されます</div>
+        <div class="manual">④登録した商品の個数の増減がしたいとき、ボタンを押せば変更できます</div>
+        <div class="manual">※同じ商品を3個購入するごとに10円安くなります</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
